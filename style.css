@@ -34,6 +34,44 @@ body {
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.7;
+    background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255,255,255,0.5)),
+    url("images/IMG_3017.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-teaching {
+  padding: 2rem 0 1rem;
+}
+
+.hero-teaching-inner {
+  /* 如果你的 .container 已经是居中定宽布局，这里只需要控制内部排版 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* 大图：占据主要视觉面积 */
+.hero-teaching-photo {
+  width: 100%;
+  max-height: 480px;          /* 根据你照片比例可以调整高 */
+  object-fit: cover;          /* 自动裁剪，保证总是铺满 */
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 如果屏幕比较大，可以让整体更“宽屏”的感觉 */
+@media (min-width: 900px) {
+  .hero-teaching {
+    padding: 2.5rem 0 1.5rem;
+  }
+  .hero-teaching-photo {
+    max-height: 520px;
+    border-radius: 20px;
+  }
 }
 
 /* 容器 & 结构 */
